@@ -5,32 +5,33 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Musharof Chy",
-    designation: "Founder @TailGrids",
+    name: "Anil Verma",
+    designation: "Co-founder @CreativeNest",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Working with 4U Consultancy Services was a game-changer for our startup. Their strategic insight and professionalism helped us streamline operations and grow faster.",
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
   {
     id: 2,
-    name: "Devid Weilium",
-    designation: "Founder @UIdeck",
+    name: "John Smith",
+    designation: "Director @TechNova Solutions",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "The team at 4U Consultancy Services exceeded our expectations. Their expertise in business development and IT consulting delivered measurable results.",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
   {
     id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
+    name: "Thomas Bill",
+    designation: "HR Head @BrightWave Inc.",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "We partnered with 4U Consultancy for talent acquisition, and the experience was flawless. Their attention to detail and commitment to quality truly stand out.",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
 ];
+
 
 const Testimonials = () => {
   return (

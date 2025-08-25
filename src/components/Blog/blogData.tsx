@@ -3,45 +3,46 @@ import { Blog } from "@/types/blog";
 const blogData: Blog[] = [
   {
     id: 1,
-    title: "Best UI components for modern websites",
+    title: "How IT Consulting Can Boost Your Business in 2025",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "Discover how tailored IT consulting services help businesses increase efficiency, reduce costs, and stay competitive in an ever-evolving tech landscape. From cloud migration to digital transformation — expert guidance makes a measurable impact.",
     image: "/images/blog/blog-01.jpg",
     author: {
-      name: "Samuyl Joshi",
-      image: "/images/blog/author-03.png",
-      designation: "Graphic Designer",
+      name: "Anil Desai",
+      image: "/images/blog/blog-01.jpg",
+      designation: "Senior IT Consultant",
     },
-    tags: ["creative"],
-    publishDate: "2025",
+    tags: ["business-growth", "strategy"],
+    publishDate: "August 2025",
   },
   {
     id: 2,
-    title: "9 simple ways to improve your design skills",
+    title: "Top 5 Cybersecurity Practices for Small Businesses",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "Small and mid-sized businesses are increasingly becoming targets of cyber attacks. In this blog, we share five essential yet practical cybersecurity practices every business must adopt to safeguard its data and customer trust.",
     image: "/images/blog/blog-02.jpg",
     author: {
-      name: "Musharof Chy",
+      name: "Rahul Mehta",
       image: "/images/blog/author-02.png",
-      designation: "Content Writer",
+      designation: "Cybersecurity Specialist",
     },
-    tags: ["computer"],
-    publishDate: "2025",
+    tags: [ "small-business", "data-protection"],
+    publishDate: "August 2025",
   },
   {
     id: 3,
-    title: "Tips to quickly improve your coding speed.",
+    title: "Why Your Business Needs Custom Software – Not Off-the-Shelf",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "While off-the-shelf tools are convenient, they often fall short of addressing unique business needs. Learn how custom software development from 4U Consultancy Services can enhance your workflows, scalability, and customer experience.",
     image: "/images/blog/blog-03.jpg",
     author: {
-      name: "Lethium Deo",
+      name: "Siddharth Jain",
       image: "/images/blog/author-03.png",
-      designation: "Graphic Designer",
+      designation: "Software Architect",
     },
-    tags: ["design"],
-    publishDate: "2025",
+    tags: ["custom-software", "development", "enterprise-solutions"],
+    publishDate: "August 2025",
   },
 ];
+
 export default blogData;

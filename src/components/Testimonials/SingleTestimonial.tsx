@@ -33,7 +33,7 @@ const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
             <h3 className="text-dark mb-1 text-lg font-semibold lg:text-base xl:text-lg dark:text-white">
               {name}
             </h3>
-            <p className="text-body-color text-sm">{designation}</p>
+            {/* <p className="text-body-color text-sm">{designation}</p> */}
           </div>
         </div>
       </div>

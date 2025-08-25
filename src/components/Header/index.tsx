@@ -72,7 +72,7 @@ const Header = () => {
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">
-              <div>
+              <div className="m-auto">
                 <button
                   onClick={navbarToggleHandler}
                   id="navbarToggler"

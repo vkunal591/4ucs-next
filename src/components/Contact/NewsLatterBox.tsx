@@ -10,9 +10,10 @@ const NewsLatterBox = () => {
       <h3 className="mb-4 text-2xl leading-tight font-bold text-black dark:text-white">
         Subscribe to receive future updates
       </h3>
-      <p className="border-body-color/25 text-body-color mb-11 border-b pb-11 text-base leading-relaxed dark:border-white/25">
-        Lorem ipsum dolor sited Sed ullam corper consectur adipiscing Mae ornare
-        massa quis lectus.
+
+      <p className="border-body-color/25 text-body-color mb-11 border-b pb-11 text-base leading-relaxed dark:text-gray-300 dark:border-white/25">
+        Stay in the loop with our latest articles, product updates, and exclusive offers.
+        We promise not to spam you — just meaningful content for founders, makers, and creators.
       </p>
       <div>
         <input
