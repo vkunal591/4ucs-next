@@ -172,6 +172,9 @@ const Header = () => {
                 </Link>
                 <div>
                   <ThemeToggler />
+                  <div className="translate-container">
+                    <div id="google_translate_element"></div>
+                  </div>
                 </div>
               </div>
             </div>

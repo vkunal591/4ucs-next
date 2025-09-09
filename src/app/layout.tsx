@@ -17,6 +17,25 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
       <head />
       <body className={`bg-[#FCFCFC] dark:bg-black ${raleway.className}`}>
+        {/* ✅ Google Translate Script */}
+        <Script
+          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+          strategy="afterInteractive"
+        />
+
+        {/* ✅ Init Script */}
+        <Script id="google-translate-init" strategy="afterInteractive">
+          {`
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,ar,hi,ta,te,ml,kn,gu,pa,bn,ur,mr,ne,sd,or,as,ks,fr,de,es,it,zh,ja,ko,ru,pt,tr',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+              }, 'google_translate_element');
+            }
+          `}
+        </Script>
+
         <Providers>
           <Header />
           {children}
@@ -28,4 +47,5 @@ export default function RootLayout({
   );
 }
 
-import { Providers } from "./providers";
+import { Providers } from "./providers"; import Script from "next/script";
+

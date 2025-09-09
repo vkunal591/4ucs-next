@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap')
-layer(base);
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap') layer(base);
 
 @import 'tailwindcss';
 
@@ -73,6 +72,7 @@ layer(base);
   color utility to any element that depends on these defaults.
 */
 @layer base {
+
   *,
   ::after,
   ::before,
@@ -111,13 +111,13 @@ layer(base);
 }
 
 @utility dot {
-  input#togglePlan:checked ~ & {
+  input#togglePlan:checked~& {
     @apply translate-x-full;
   }
 }
 
 @utility box {
-  input#checkboxLabel:checked ~ & span {
+  input#checkboxLabel:checked~& span {
     @apply opacity-100;
   }
 }
@@ -129,8 +129,67 @@ layer(base);
 }
 
 @layer components {
-  input[type="checkbox"]:checked ~ label span svg {
+  input[type="checkbox"]:checked~label span svg {
     @apply inline-flex;
   }
 }
 
+
+
+
+/* Translate Widget Container */
+.translate-container {
+  position: fixed;
+  bottom: 4.5%;
+  right: 16px;
+  background-color: var(--color-primary);
+  padding: 8px;
+  border-radius: 100%;
+  z-index: 10000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Dropdown Styling */
+.goog-te-combo {
+  background-color: #f9fafb;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.goog-te-combo:hover {
+  background-color: #e5e7eb;
+}
+
+/* Hide Google branding */
+.goog-logo-link,
+.goog-te-gadget span,
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+.goog-te-gadget {
+  font-size: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#\:2\.container {
+  position: absolute;
+  bottom: -50%;
+  right: 0px !important;
+  left: 50%;
+  padding: 8px;
+  z-index: -100;
+  width: 100px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  visibility: hidden;
+}
