@@ -4,6 +4,7 @@ import AboutSection1 from "@/components/About/AboutSection1";
 import AboutSection2 from "@/components/About/AboutSection2";
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
+import OurTeam from "@/components/About/OurTeam";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
 import { Metadata } from "next";
@@ -39,6 +40,7 @@ const AboutPage = () => {
         subTitle="Our Values"
         subContent="We stand for innovation, integrity, and impact. Every line of code we write is guided by our commitment to quality, usability, and user experience."
       />
+      <OurTeam />
     </>
   );
 };
