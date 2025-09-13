@@ -4,7 +4,7 @@ import Image from "next/image";
 const SingleFeature = ({ feature }: { feature: Feature }) => {
   const { icon, title, paragraph } = feature;
   return (
-    <div className="w-full">
+    <div key={title} className="w-full">
       <div className="wow fadeInUp" data-wow-delay=".15s">
         <div className="bg-primary/0 mb-10 flex h-[120px] w-[120px] p-2 items-center justify-center rounded-md">
           <Image

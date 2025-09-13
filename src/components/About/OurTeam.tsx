@@ -1,10 +1,13 @@
 'use client';
 
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
-import 'swiper/css';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 // ===========================
 // ✅ Type Definitions
@@ -23,48 +26,48 @@ type Testimonial = {
 const defaultTestimonials: Testimonial[] = [
   {
     name: 'Kunal Verma',
-    image: '/assets/images/pr4.png',
+    image: '/images/team/kunal.png',
     quote:
-      "As a founder, my vision has always been to build a team that delivers far beyond just code. We are dedicated to driving meaningful results and cultivating strong, lasting client relationships—and that commitment is reflected in every project we undertake. Our approach is centered on understanding the unique challenges of each client and crafting tailored solutions that not only meet their technical needs but also contribute to their broader business success. This focus on impact and partnership is what sets us apart and fuels our continuous growth.",
+      "As a founder, my vision has always been to build a team that delivers far beyond just code. We are dedicated to driving meaningful results and cultivating strong, lasting client relationships...",
     gender: 'male',
     role: 'Founder & CEO',
   },
   {
     name: 'Prabhashankar Maurya',
-    image: '/assets/images/pr2.png',
+    image: '/images/team/prabhashankar.jpeg',
     gender: 'male',
     role: 'Manager',
-    quote: `Prabhashankar Maurya is a highly skilled professional specializing in client acquisition, project coordination, and strategic business development across India and the Global South. In his role, he actively drives market outreach, builds strong client relationships, and oversees the successful delivery of marketing and sales initiatives in diverse regions. His ability to blend operational efficiency with strategic vision ensures projects align perfectly with client goals and company objectives. Managing multicultural teams and coordinating complex projects, Prabhashankar consistently delivers results that enhance revenue growth and strengthen brand positioning in competitive markets. His leadership supports expanding organizational reach through innovation and partnerships.`,
+    quote: `Prabhashankar Maurya is a highly skilled professional specializing in client acquisition, project coordination, and strategic business development across India and the Global South...`,
   },
   {
     name: 'Sweta Kumari',
-    image: '/assets/images/pr1.png',
+    image: '/images/icons/female.png',
     quote:
-      "The branding and design services provided by 4UCS IT Solutions PVT. LTD have completely transformed our company's visual identity. They crafted a modern, professional look that truly resonates with our target audience. This fresh approach has significantly boosted our brand recognition and customer engagement. Beyond aesthetics, their thoughtful design strategy reflects a deep understanding of market trends and user experience, helping us stand out in a crowded marketplace. Working with their creative team has been an inspiring collaboration that continues to drive our business forward.",
+      "The branding and design services provided by 4U Consultancy Services have completely transformed our company's visual identity...",
     gender: 'female',
     role: 'UI/UX Designer',
   },
   {
     name: 'Gaurav Sharma',
-    image: '/assets/images/pr6.png',
+    image: '/images/icons/male.png',
     quote:
-      "I find great satisfaction in solving real-world problems through clean, scalable code. At 4UCS, we’re empowered to innovate continuously, using the latest technologies and best practices. This environment fosters both personal and professional growth, allowing me to deliver solutions that truly meet client needs. Collaborating closely with clients ensures that the products we build are not only functional but also impactful. Our team's commitment to quality and efficiency drives success for both our clients and ourselves.",
+      "I find great satisfaction in solving real-world problems through clean, scalable code...",
     gender: 'male',
     role: 'Full Stack Developer',
   },
   {
     name: 'Sunny Verma',
-    image: '/assets/images/pr3.png',
+    image: '/images/icons/male.png',
     quote:
-      "The team at 4UCS completely transformed our online presence with their expert SEO and digital marketing services. Thanks to their strategic campaigns and deep understanding of search engine algorithms, we achieved higher rankings that brought in significantly more qualified leads than ever before. Their data-driven approach and continuous optimization ensure that our digital footprint keeps growing sustainably. This partnership has been instrumental in expanding our market reach and increasing overall business performance.",
+      "The team at 4UCS completely transformed our online presence with their expert SEO and digital marketing services...",
     gender: 'male',
     role: 'Digital Marketing Specialist',
   },
   {
     name: 'Ayesha Patel',
-    image: '/assets/images/pr5.png',
+    image: '/images/icons/female.png',
     quote:
-      "Managing the development team at 4UCS has been an incredible journey of growth and innovation. Every project presents unique challenges that push us to think creatively and refine our technical skills. This culture of continuous learning and collaboration inspires us to build impactful applications that solve real problems. I take pride in leading a talented team that is committed to delivering excellence and driving the company's mission forward through technology and teamwork.",
+      "Managing the development team at 4UCS has been an incredible journey of growth and innovation...",
     gender: 'female',
     role: 'App Developer',
   },
@@ -75,54 +78,88 @@ const defaultTestimonials: Testimonial[] = [
 // ===========================
 export default function OurTeam() {
   return (
-    <div className="w-full flex flex-col lg:flex-row p-4 md:p-16 mx-auto">
-      <div className="mt-6 w-full lg:w-1/2">
-        <h4 className="text-2xl font-semibold mb-2">Our Team and Founders</h4>
-        <p className="mb-2">
-          Behind our success is a passionate, skilled, and visionary team dedicated to pushing the boundaries of digital innovation. From seasoned developers and creative designers to strategic thinkers and project managers, our team works seamlessly to deliver high-impact solutions for every client.
-        </p>
-        <p className="mb-2">
-          Our founders are entrepreneurs and technologists with a deep understanding of what it takes to scale in the digital age. Their leadership, combined with a commitment to excellence and a people-first culture, has been the driving force behind our growth and client satisfaction.
-        </p>
-        <p>
-          Together, we’re not just building websites and apps — we’re building long-term partnerships that fuel success.
-        </p>
-      </div>
-
-      {/* Swiper Carousel */}
-      <Swiper
-        modules={[Autoplay]}
-        spaceBetween={30}
-        slidesPerView={1}
-        autoplay={{ delay: 5000 }}
-        className="w-full lg:w-1/2"
+    <div className="w-full flex flex-col items-center justify-center p-4 md:p-16 mx-auto bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white">
+      {/* Introduction Section */}
+      <motion.div
+        className="w-full text-center lg:w-3/4 mb-16 px-4"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
       >
-        {defaultTestimonials.map((t, index) => (
-          <SwiperSlide key={index}>
-            <div className="relative h-72 p-4 pt-2 rounded-3xl overflow-visible w-full">
-              <div className="flex items-end justify-start gap-2 absolute pl-4 mt-3">
-                <Image
-                  src={t.gender === 'male' ? '/images/icons/male.png' : '/images/icons/female.png'}
-                  alt={t.name}
-                  width={80}
-                  height={80}
-                  className="w-20 h-20 rounded-full"
-                />
-                <div>
-                  <h4 className="font-semibold">{t.name}</h4>
-                  <h4 className="font-semibold text-gray-800 text-xs mb-2">{t.role}</h4>
-                </div>
-              </div>
+        <h2 className="text-5xl font-extrabold text-black dark:text-blue-400 mb-4 tracking-tight drop-shadow-sm">
+          Meet Our Visionary Team
+        </h2>
+        <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto">
+          Behind our success is a passionate, skilled, and visionary team dedicated to pushing the
+          boundaries of digital innovation. We&apos;npre not just building websites and apps—we’re building
+          long-term partnerships that fuel success.
+        </p>
+      </motion.div>
 
-              <div className="bg-blue-100 rounded-2xl mt-10 h-full pt-14 pb-4 px-4 text-sm">
-                <div className="bg-white rounded-2xl h-full w-full p-6">
-                  <p className="line-clamp-7">&quot;{t.quote}&quot;</p>
+      {/* Swiper Section */}
+      <div className="w-full max-w-6xl">
+        <Swiper
+          modules={[Autoplay]}
+          spaceBetween={30}
+          slidesPerView={3}
+          loop
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          // pagination={{ clickable: true }}
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            640: { slidesPerView: 1 },
+            1024: { slidesPerView: 2 },
+            1280: { slidesPerView: 3 },
+          }}
+        >
+          {defaultTestimonials.map((t, index) => (
+            <SwiperSlide className='my-10' key={index}>
+              <motion.div
+                className="relative group w-full aspect-square rounded-3xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                {/* Image */}
+                <div className="absolute inset-0 z-0">
+                  <Image
+                    src={t.image}
+                    alt={t.name}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                    className="grayscale group-hover:grayscale-0 transition-all duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent transition-opacity duration-500 group-hover:from-gray-900/60" />
                 </div>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+
+                {/* Content */}
+                <div className="relative z-10 h-full w-full flex flex-col justify-end p-8 text-white">
+                  {/* Initial View */}
+                  <motion.div className="flex flex-col items-start transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
+                    <h4 className="text-2xl font-bold">{t.name}</h4>
+                    <p className="text-sm font-semibold text-blue-400">{t.role}</p>
+                  </motion.div>
+
+                  {/* Hover View */}
+                  <motion.div
+                    className="absolute inset-x-0 bottom-0 p-8 transform translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out flex flex-col items-start"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                  >
+                    <h4 className="text-2xl font-bold mb-1">{t.name}</h4>
+                    <p className="text-sm font-semibold text-blue-400 mb-4">{t.role}</p>
+                    <p className="text-sm line-clamp-4 leading-relaxed italic">{`"${t.quote}"`}</p>
+                  </motion.div>
+                </div>
+              </motion.div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 }
