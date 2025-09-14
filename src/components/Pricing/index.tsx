@@ -12,7 +12,7 @@ const Pricing = () => {
       <div className="container">
         <SectionTitle
           title="Simple and Affordable Pricing"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          paragraph="Our pricing plans are designed to fit businesses of every size—from startups to enterprises. Whether you need web development, CRM applications, cloud solutions, or digital marketing, 4U Consultancy Services offers transparent and cost-effective packages with no hidden charges."
           center
           width="665px"
         />
@@ -21,11 +21,10 @@ const Pricing = () => {
           <div className="mb-8 flex justify-center md:mb-12 lg:mb-16">
             <span
               onClick={() => setIsMonthly(true)}
-              className={`${
-                isMonthly
-                  ? "pointer-events-none text-primary"
-                  : "text-dark dark:text-white"
-              } mr-4 cursor-pointer text-base font-semibold`}
+              className={`${isMonthly
+                ? "pointer-events-none text-primary"
+                : "text-dark dark:text-white"
+                } mr-4 cursor-pointer text-base font-semibold`}
             >
               Monthly
             </span>
@@ -36,9 +35,8 @@ const Pricing = () => {
               <div className="relative">
                 <div className="h-5 w-14 rounded-full bg-[#1D2144] shadow-inner"></div>
                 <div
-                  className={`${
-                    isMonthly ? "" : "translate-x-full"
-                  } shadow-switch-1 absolute left-0 top-[-4px] flex h-7 w-7 items-center justify-center rounded-full bg-primary transition`}
+                  className={`${isMonthly ? "" : "translate-x-full"
+                    } shadow-switch-1 absolute left-0 top-[-4px] flex h-7 w-7 items-center justify-center rounded-full bg-primary transition`}
                 >
                   <span className="active h-4 w-4 rounded-full bg-white"></span>
                 </div>
@@ -46,11 +44,10 @@ const Pricing = () => {
             </div>
             <span
               onClick={() => setIsMonthly(false)}
-              className={`${
-                isMonthly
-                  ? "text-dark dark:text-white"
-                  : "pointer-events-none text-primary"
-              } ml-4 cursor-pointer text-base font-semibold`}
+              className={`${isMonthly
+                ? "text-dark dark:text-white"
+                : "pointer-events-none text-primary"
+                } ml-4 cursor-pointer text-base font-semibold`}
             >
               Yearly
             </span>
@@ -62,7 +59,7 @@ const Pricing = () => {
             packageName="Lite"
             price={isMonthly ? "40" : "120"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Designed for individuals and small teams—get essential features, professional support, and a reliable foundation to start your digital journey."
           >
             <OfferList text="All UI Components" status="active" />
             <OfferList text="Use with Unlimited Projects" status="active" />
@@ -75,7 +72,7 @@ const Pricing = () => {
             packageName="Basic"
             price={isMonthly ? "399" : "789"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Perfect for startups and small businesses—includes basic web development support, essential tools, and reliable maintenance to get you online quickly."
           >
             <OfferList text="All UI Components" status="active" />
             <OfferList text="Use with Unlimited Projects" status="active" />
@@ -88,7 +85,7 @@ const Pricing = () => {
             packageName="Plus"
             price={isMonthly ? "589" : "999"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Ideal for businesses getting started—includes core features, responsive design, and essential support to build your online presence."
           >
             <OfferList text="All UI Components" status="active" />
             <OfferList text="Use with Unlimited Projects" status="active" />

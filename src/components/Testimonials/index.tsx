@@ -38,10 +38,11 @@ const Testimonials = () => {
     <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="What Our Users Says"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="What Our Users Say"
+          paragraph="Our clients trust us to deliver reliable, scalable, and innovative IT solutions. From startups to enterprises, businesses across industries share how 4U Consultancy Services has helped them achieve growth, efficiency, and a stronger digital presence."
           center
         />
+
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           {testimonialData.map((testimonial) => (

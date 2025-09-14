@@ -126,14 +126,14 @@ const Footer = () => {
                       Blog
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       href="/"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Pricing
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link
                       href="/about"
@@ -194,14 +194,14 @@ const Footer = () => {
                       Open Support Ticket
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       href="/"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Terms of Use
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link
                       href="/about"
@@ -217,7 +217,7 @@ const Footer = () => {
 
           <div className="h-px w-full bg-linear-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-8">
-            <p className="text-center text-base text-body-color dark:text-white">
+            <div className="text-center text-base text-body-color dark:text-white">
               <footer>
                 {/* © {new Date().getFullYear()} All Rights Reserved{" "} */}
                 <a
@@ -229,7 +229,7 @@ const Footer = () => {
                   4U Consultancy Services
                 </a>
               </footer>
-            </p>
+            </div>
           </div>
         </div>
         <div className="absolute right-0 top-14 z-[-1]">

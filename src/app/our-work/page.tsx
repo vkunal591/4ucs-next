@@ -5,6 +5,7 @@ import AboutSection2 from "@/components/About/AboutSection2";
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import Breadcrumb from "@/components/Common/Breadcrumb";
+import Features from "@/components/Features";
 import ProjectsSection from "@/components/Project/ProjectsSection";
 
 import { Metadata } from "next";
@@ -23,6 +24,7 @@ const OurWorkPage = () => {
         description="We empower startups and businesses to grow faster with scalable, intuitive, and high-performance web solutions."
       />
       <ProjectsSection />
+      <Features />
     </>
   );
 };
