@@ -6,16 +6,34 @@ const NewsLatterBox = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="shadow-three dark:bg-gray-dark relative z-10 rounded-xs bg-white p-8 sm:p-11 lg:p-8 xl:p-11">
+    <div className="shadow-three dark:bg-gray-dark h-full relative z-10 rounded-xs bg-white  p-8 sm:p-11 lg:p-8 xl:p-11">
+      <h3 className="mb-4 text-2xl leading-tight font-bold text-black dark:text-white">
+        Contact Information
+      </h3>
+      <ul className="space-y-4 mb-4 text-base text-body-color dark:text-body-color-dark">
+        <li>
+          <strong>Business Name:</strong> 4U Consultancy Services
+        </li>
+        <li>
+          <strong>Address:</strong> Moti Nagar, New Delhi - 110015
+        </li>
+        <li>
+          <strong>Email:</strong> info@4ucs.in
+        </li>
+        <li>
+          <strong>Phone:</strong> +91 9229128072
+        </li>
+      </ul>
+
       <h3 className="mb-4 text-2xl leading-tight font-bold text-black dark:text-white">
         Subscribe to receive future updates
       </h3>
-
-      <p className="border-body-color/25 text-body-color mb-11 border-b pb-11 text-base leading-relaxed dark:text-gray-300 dark:border-white/25">
+      {/* <p className="border-body-color/25 text-body-color mb-11 border-b pb-11 text-base leading-relaxed dark:text-gray-300 dark:border-white/25">
         Stay in the loop with our latest articles, product updates, and exclusive offers.
         We promise not to spam you — just meaningful content for founders, makers, and creators.
-      </p>
-      <div>
+      </p> */}
+
+      <div className="">
         <input
           type="text"
           name="name"
@@ -31,11 +49,11 @@ const NewsLatterBox = () => {
         <input
           type="submit"
           value="Subscribe"
-          className="bg-primary shadow-submit hover:bg-primary/90 dark:shadow-submit-dark mb-5 flex w-full cursor-pointer items-center justify-center rounded-xs px-9 py-4 text-base font-medium text-white duration-300"
+          className="bg-primary shadow-submit hover:bg-primary/90 dark:shadow-submit-dark flex w-full cursor-pointer items-center justify-center rounded-xs px-9 py-4 text-base font-medium text-white duration-300"
         />
-        <p className="text-body-color dark:text-body-color-dark text-center text-base leading-relaxed">
+        {/* <p className="text-body-color dark:text-body-color-dark text-center text-base leading-relaxed">
           No spam guaranteed, So please don’t send any spam mail.
-        </p>
+        </p> */}
       </div>
 
       <div>
